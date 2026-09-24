@@ -1,13 +1,17 @@
 public class OrderApp {
+        static double computeTotalWithVat(double unitPrice, int quantity) {
+            return unitPrice * quantity + unitPrice * quantity * 0.2;
+}
+
     public static void main(String[] args) {
         String firstCustomerName= "Alice";
         double firstUnitPrice = 10;
         int firstQuantity = 2;
-        double firstTotalWithVat = firstUnitPrice * firstQuantity + firstUnitPrice * firstQuantity * 0.2;
+        double firstTotalWithVat = computeTotalWithVat(firstUnitPrice, firstQuantity);
         String secondCustomerName = "Bob";
         double secondUnitPrice = 15;
         int secondQuantity = 1;
-        double secondTotalWithVat = secondUnitPrice * secondQuantity + secondUnitPrice * secondQuantity * 0.2;
+        double secondTotalWithVat = computeTotalWithVat(secondUnitPrice, secondQuantity);
         System.out.println("Client : " + firstCustomerName);
         System.out.println("Prix HT : " + firstUnitPrice);
         System.out.println("Quantité : " + firstQuantity);
@@ -32,5 +36,9 @@ public class OrderApp {
         }
     }
 }
+
+
+
 }
+
 
